@@ -11,7 +11,7 @@ output:
 require(knitr)
 require(tidyverse)
 require(tigerstats)
-
+mydata<- read.csv(file= "GSScsv.csv") 
 ```
 
 # Introduction
@@ -36,9 +36,30 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+boxplot(WORDSUM~DEGREE,data=mydata)
+```
+  
+In this preliminary display of the three data formats, Bachelor, Graduate, and Junior College levels. The initial inference would be that there is a distinct height difference in the levels of academic achievements. The lowest levels are in the junior college sections. We can determine that this is so by looking at black line in the boxes, the median, and we can determine that there is only few instances of overlap per each pair of data boxes. 
+  
+```{r}
+basicCN <- ggplot(mydata,aes(x=DEGREE,y=WORDSUM))
+```
+```{r}
+basicCN + geom_boxplot()
+```
+    
+These two data displays show multiple boxes placed at levels from 2 through 13, with five sets of academic levels listed on the bottom row. This display shows that the LT high school level, along with the high school box shared the same bottom line at approximately, 7.2. There is indeed a difference in the height of the five data points. The second pictograph showcases this element best, the same information was included and the same data was used to reach all ten box placements.  
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+  
+```{r}
+favstats(WORDSUM~DEGREE,data=mydata)
+```
+  
+In this sample excerpt of information for the five data sets, there is a displayed quadrant, using the letter Q and a number, 1 or 3. This number quantifies the itemized information into quarters which shows the percentile or whole number that his portion of data contains. This information, when you compare the largest Q1 number and the Q3 reports, you can see a large deviance in information. Specifically, the LT High school Q1 report, 7 compared to the Bachelor Q3 number 11. To assume that this means there is a statistical element, there will need to be an inferential test. To complete this, we will utilize tukey HDS. Using this model we can compare pairs of data to each other and can see the information organized much better. 
 
 ## Inferential Results
 
