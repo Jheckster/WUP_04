@@ -84,3 +84,5 @@ This probability display is too low to accept, we reject the null hypothesis and
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+  
+To conclude the above results, the comparison of data responds positively to the hypothesis. This conclusion was obtained by analyzing numerical reports and graphical data, using plotted box displays and brackets. The ggplot system was used to showcase the level of education on a single plain graph and then again by a multiple system test through the Anova program. Afterwards the quadrant and probability numbers were included and evaluted to show the comparison to the data. There is a positive inference between some levels of higher education in tandem with the WORDSUM test. This includes the Bachelor, Graduate and Junior College academic levels.  
